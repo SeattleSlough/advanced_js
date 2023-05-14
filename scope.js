@@ -20,7 +20,7 @@ function cc() {
 
 // console.log( b ); //"can I access this" as cc() not yet invoked
 
-// cc(); //"hello" as b with the global scope is redefined by invoking this function
+// cc(); //"hello" as b with the global scope staying unchanged
 
 //
 var fun = 5;
@@ -39,12 +39,12 @@ function funnerFunction() {
 
 function funnestFunction() {
     //child scope
-    var bar = "AHHHHHH";
-    console.log( 3, bar );
+    var fun = "AHHHHHH";
+    console.log( 3, fun );
 }
 
 console.log( "window", fun );
 funFunction();
 funnerFunction();
 funnestFunction();
-console.log(funnestFunction.bar);
+console.log(fun);
