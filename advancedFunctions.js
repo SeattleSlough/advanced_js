@@ -51,12 +51,13 @@ const sum = ( num ) => num + 1;
 compose( sum, sum )( 5 ); // 7
 
 
-//AVOIDING SIDE EFFECTS & FUNCTIONAL PURITY (PURE FUNCTIONS)
+// PURE FUNCTIONS: Functional Determinism & Avoiding Side Effects
 // We think of functions as being their own universe and these two principles ensure we adhere to that philosophy
 
 //Side Effects
 // side effects are actions that happen inside the function that we don't know anything about
 // if it reads or writes to an external variable or console.logs then it's a Side Effect
+// IOW, the function should be entirely self-contained to the arguments it is passed
 
 //example of Side Effect
 var a = 1;
@@ -68,7 +69,6 @@ function b() {
 // We always want a value to be returned by a function.
 // This makes our code DETERMINISTIC (Determinism)
 // The same inputs always return the same value (e.g., compose(sum, sum)(5) always returns 7 OR multiplyBy5(3) always returns 15)
-// This is a PURE FUNCTION
 
 
 
