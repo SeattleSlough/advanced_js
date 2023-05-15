@@ -27,6 +27,8 @@ const add5 = ( num ) => num + 5;
 compose( add1, add5 )( 10 ); // 16
 
 //What are the two elements of a pure function?
-// 1) It always returns a value (i.e., never 'undefined')
+// // 1) It always returns a value (i.e., never 'undefined') (Correct answer follows)
+//  1) (From answer file) No Side Effects-- > It does not depend on any state, or data, change during a program’s execution.  
+//  It must only depend on its input elements.
 // 2) When given the same inputs, it always returns the same value (Deterministic)
 
