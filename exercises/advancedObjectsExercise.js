@@ -25,8 +25,8 @@ class Mammal extends Animal {
     constructor ( name, type, color ) {
         super( name, type, color );
     }
-    moo() {
-        console.log( `Hello there! My name is ${ this.name } and I am a ${ this.color } ${ this.type }` );
+    sound() {
+        console.log( `Moooooooo!!!!!!!  Hello there! My name is ${ this.name } and I am a ${ this.color } ${ this.type }` );
     }
 }
 
