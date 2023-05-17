@@ -80,3 +80,6 @@ const wizard1 = new Wizard( "Fred", "Healer" ); // 'new' instantiates the class
 // console.log('wizard', this) returns Wizard {name: "Shelly", type: "Healer"};
 // this is because super() immediately goes to Player constructor so the
 // console.log('wizard', this) function is last to run in this call stack;
+
+
+// PASS BY VALUE vs PASS BY REFERENCE 
