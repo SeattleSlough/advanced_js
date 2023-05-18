@@ -62,3 +62,6 @@ let obj = {
 'my name is Rudolf the raindeer';
 
 ( Object.entries( obj ).toString() ).replaceAll( ',', ' ' );
+
+// Andrei's solution 
+Object.entries( obj ).map( value => value.join( " " ) ).join( ' ' );
