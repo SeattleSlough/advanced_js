@@ -35,5 +35,38 @@ let will_pokemon = {
     }
 };
 
+let andrei_pokemon = {
+    raichu: {
+        species: 'Mouse Pokemon',
+        height: 0.8,
+        weight: 30
+    }
+};
+
 let weight = will_pokemon.pikachu.weight;
 console.log( weight );
+
+let raichu_weight = will_pokemon.pikachu.weight;
+
+// let weight2 = andrei_pokemon.pikachu.weight;
+// console.log( weight ); 
+// errors out as andrei_pokemon doesn't have pikachu object 
+
+// to solve in past 
+if( andrei_pokemon.pikachu && andrei_pokemon.pikachu.weight ) {
+    let weight2 = andrei_pokemon.pikachu.weight;
+    console.log( weight2 );
+} else {
+    let weight2 = undefined;
+    console.log( weight2 );
+}
+
+// Now this is done with Optional Chaining...
+
+let weight3 = andrei_pokemon?.pikachu?.weight;
+console.log( weight3 );
+
+andrei_pokemon.pikachu = will_pokemon.pikachu;
+
+weight3 = andrei_pokemon?.pikachu?.weight;
+console.log( weight3 );
