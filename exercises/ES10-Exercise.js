@@ -46,5 +46,5 @@ updatedUsersArray = usersArray.map( ( user ) => [ user[ 0 ], user[ 1 ] * 2 ] );
 
 //#8 change the output array of question #7 back into an object with all the users IDs updated to their new version. Should output: { user1: 36546, user2: 185666, user3: 180630 }
 
-const updatedUserObj = Object.fromEntries( arrayOfUser1 );
+const updatedUserObj = Object.fromEntries( arrayOfUsers1 );
 console.log( updatedUserObj );
