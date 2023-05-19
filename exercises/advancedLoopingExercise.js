@@ -69,7 +69,16 @@ function checkBasket( basket, lookingFor ) {
   let inBasket = "No";
   for( item in basket ) {
     if( item === lookingFor ) { inBasket = "Yes"; }
+    return inBasket;
   }
-  return inBasket;
 }
 
+//ANDREI'S SOLUTION (I like it better)
+function checkBasketAndrei( basket, lookingFor ) {
+  for( item in basket ) {
+    if( item === lookingFor ) {
+      return `${ lookingFor } is in your basket`;
+    }
+    return `That item is not in your basket`;
+  }
+}
