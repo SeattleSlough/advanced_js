@@ -70,3 +70,32 @@ andrei_pokemon.pikachu = will_pokemon.pikachu;
 
 weight3 = andrei_pokemon?.pikachu?.weight;
 console.log( weight3 );
+
+
+// TOPIC: Nullish Coalescing Operator 
+// Can be used in lieu of OR 
+
+// creating new andrei_pokemon object and adding new 'power' property
+andrei_pokemon = {
+    pikachu: {
+        species: 'Mouse Pokemon',
+        height: 0.8,
+        weight: 30,
+        power: 0
+    }
+};
+
+//let's assume we don't know if pikachu has a power property
+// before ES2020 if we wanted the power value we would do this...
+let power = andrei_pokemon?.pikachu?.power || 'no power';
+console.log( power ); // no power
+
+// the ?. can't be used to set a value because power is the end of the chain
+// so we use the || operator or get a fallback value if the property doesn't exist
+
+// the issue is that || uses a 'truthy' logic which is why and empty string and false will yield 'no power'
+// what if we want 'no power' only if the value is Null or undefined?
+
+power = andrei_pokemon?.pikachu?.power ??
+
+    console.log( power );
