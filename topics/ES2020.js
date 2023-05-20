@@ -98,4 +98,7 @@ console.log( power ); // no power
 
 power = andrei_pokemon?.pikachu?.power ??
 
-    console.log( power );
+
+console.log( power );
+
+console.log(null ?? ( false || 'hellooo' )  );
