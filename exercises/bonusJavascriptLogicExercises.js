@@ -24,7 +24,6 @@ const arrayOrganizer = ( array ) => {
     let count = 0;
     let answer = [];
     array.forEach( ( item, index ) => {
-        debugger;
         if( item === ( data[ index + 1 ] ) && index === count ) {
             let filtered = data.filter( duplicate => duplicate === item );
             count += filtered.length;
