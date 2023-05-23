@@ -16,24 +16,26 @@ const array = [ 1, 2, 4, 591, 392, 391, 2, 5, 10, 2, 1, 1, 1, 20, 20 ];
 //  - ANSWER:sort() on numbers and letters works for not mixing up the two types
 // Find a way to create an array of like elements
 
-const simpleArray = [ 1, 1, 1, 2, 3, 3, 4 ];
 
-const test = ( data ) => {
-    let output = [];
-    data.forEach( ( item, i ) => {
-        if( item === data[ i + 1 ] ) {
-            debugger;
-            output.push( data.filter( duplicate => duplicate === item ) );
+const simpleArray = [ 1, 1, 1, 2, 3, 3, 4, 22, 10, 37 ];
+
+const arrayOrganizer = ( array ) => {
+    array.sort( function( a, b ) { return a - b; } );
+    let count = 0;
+    let answer = [];
+    array.forEach( ( item, index ) => {
+        debugger;
+        if( item === ( data[ index + 1 ] ) && index === count ) {
+            let filtered = data.filter( duplicate => duplicate === item );
+            count += filtered.length;
+            answer.push( filtered );
+        } if( index !== count ) {
+            count;
         } else {
-            output.push( item );
+            answer.push( item );
+            count++;
         }
     } );
-    return output;
+    return answer;
 };
-console.log( test( simpleArray ) );
 
-
-
-
-
-const arrayOrganizer = ( array ) => { };
